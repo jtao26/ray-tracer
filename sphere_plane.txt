@@ -1,0 +1,24 @@
+eye 10 2 25
+viewdir 0 0 -1
+viewdist 15
+tracedepth 3
+updir 0 1 0
+vfov 50
+imsize 512 512
+bkgcolor 0 0 0
+light 20 20 20 1.0 1.0 0.0 0.0
+
+v 0 0 0
+v 20 0 0
+v 0 20 0
+v 20 20 0
+v 0 20 20
+v 0 0 20
+v 20 0 20
+
+mtlcolor 0 .4 .4 1 1 1 0.8 0.6 0.5 20 1 1
+f 1 7 2
+f 6 7 1
+
+mtlcolor 1.0 0.0 1.0 1 1 1 0.4 0.4 0.4 20 1 1
+sphere 10 2.5 10 2

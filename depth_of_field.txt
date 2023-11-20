@@ -1,0 +1,39 @@
+eye 0 2 25
+viewdir 0 0 -1
+viewdist 10
+tracedepth 3
+updir 0 1 0
+vfov 50
+imsize 512 512
+bkgcolor 0 0 0
+light 20 20 20 1.0 1.0 0.0 0.0
+
+v -10 10 -20
+v -10 0 25
+v 10 0 25
+v 10 10 -20
+vt 0 0
+vt 0 1
+vt 1 0
+vt 1 1
+
+mtlcolor 1.0 0.0 1.0 1 1 1 0.4 0.4 0.4 20 1 0.3
+sphere 0 3 15 0.6
+mtlcolor 1.0 0.0 1.0 1 1 1 0.4 0.4 0.4 20 1 1
+texture world.ppm
+sphere -5 12.5 -20 2
+sphere 0 11.5 -15 2
+sphere 3 10.5 -10 2
+
+sphere 3 8 -5 2
+sphere 6 7 0 2
+sphere -6 6 5 1.5
+
+
+sphere -1.5 1.4 20 0.8
+sphere 1 1.4 22 0.6
+
+mtlcolor 0 .4 .4 1 1 1 0.8 0.6 0.5 20 1 1
+texture wood.ppm
+f 1/1 2/2 4/3
+f 2/2 3/4 4/3
