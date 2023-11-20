@@ -1,11 +1,11 @@
-# CSCI 5607 RayTracer Readme File Hw1d
+# Ray Tracer
 #### This is a readme file created by Junyue Tao about the ray-tracing program
 
 ---
 
 **Additional changes have been made compared to the previous version 1c:**
-1. Now the program can recursively trace the reflective light with user costomed depth
-2. The program can also recursively trace the refract light
+1. Now the program can recursively trace the reflective light with user customed depth
+2. The program can also recursively trace the refracted light
 3. The program now can enable depth of field effect
 
 ---
@@ -13,7 +13,7 @@
 ## Build
 The provided file includes a CMake file named CMakeList.txt.
 
-Recommended CMake version on Windows is v3.13 or higher, as new features of CMake related to Visual Studio are released on that version. The version below 3.13 may lead to issues like being unable to set read-in file names using CMake stript.
+The recommended CMake version on Windows is v3.13 or higher, as new features of CMake related to Visual Studio are released on that version. The version below 3.13 may lead to issues like being unable to set read-in file names using CMake stript.
 
 ---
 
@@ -46,20 +46,20 @@ mkdir build
 cd build
 cmake ..
 ```
-It will auto-generate VS solution file on your Windows under the *\<build\>* folder we just created. Then open the VS solution file called *Raytracer.sln*, right-click Raytracer inside the Solution Explorer at the right side of the VS window, select "Set as startup project", then use the integrated debugger to debug or run the program.
+It will auto-generate Visual Studio solution file on your Windows under the *\<build\>* folder we just created. Then open the VS solution file called *Raytracer.sln*, right-click Raytracer inside the Solution Explorer at the right side of the VS window, select "Set as startup project", then use the integrated debugger to debug or run the program.
 
 ---
 
 ### Use a texture file
-To use the texture feature, there's a slightly different between windows and ubuntu:
+To use the texture feature, there's a slight difference between windows and Ubuntu:
 
 1. Windows:
     
-    Recall that we build and run the software via Visual Studio on windows, and in the previous step we've created a *build* folder. Make sure that the texture.ppm file is in the build folder. This means that the .ppm texture file should be at the same location with the .sln VS solution file. If not, it might cause troubles.
+    Recall that we build and run the software via Visual Studio on Windows, and in the previous step, we've created a *build* folder. Make sure that the texture.ppm file is in the build folder. This means that the .ppm texture file should be at the same location as the .sln VS solution file. If not, it might cause some trouble.
 
 2. Ubuntu:
     
-    Simply put the .ppm file at the root folder of the program, since we're using terminal running the program on ubuntu.
+    Simply put the .ppm file in the root folder of the program, since we're using a terminal running the program on Ubuntu.
 
 
 ### Obtain the output ppm file
@@ -70,11 +70,11 @@ The output ppm file will be at the same location where the VS solution file is l
 The input file name is necessary to successfully execute the program, and the output file name is optional, if not provided, the default name will be used.
 
 ## File
-The program is written in c++ and it depends on variety of files including "Vector3", "Point3", "Ray", "Triangle" etc. Files are built for later convenience of future improvement and further development.
+The program is written in C++ and it depends on a variety of files including "Vector3", "Point3", "Ray", "Triangle" etc. Files are built for later convenience of future improvement and further development.
 
 **Additional changes have been made compared to the previous version 1c:**
-1. Now the program can recursively trace the reflective light with user costomed depth
-2. The program can also recursively trace the refract light
+1. Now the program can recursively trace the reflective light with user-customed depth
+2. The program can also recursively trace the refracted light
 
 1. Reflective ray tracing & refract light tracing
 
@@ -125,14 +125,14 @@ Inside Ray.cpp
 ## Custom modification
 Now the program accepts two new keyword "tracedepth" and "viewdist" to enable some new features.
 
-#### Explaination:
+#### Explanation:
 ```
 - setup.txt
 
 tracedepth X      -- this will set the ray tracer's max tracing depth, 
                      once the current depth > max_depth, the tracing will stop
-viewdist X        -- this keyworkd will enable depth of field function, any object that is not licated at
-                     this viewing distance will looks blury
+viewdist X        -- this keyword will enable depth of field function, any object that is not located at
+                     this viewing distance will looks blurry
 
 ```
 #### Example Image:
@@ -150,4 +150,4 @@ viewdist X        -- this keyworkd will enable depth of field function, any obje
 
 4. Depth of field(No texture, no refraction)
 
-![](./pics/depth_of_field(no texture).png)
+![](./pics/depth_of_field(no_texture).png)
