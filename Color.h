@@ -28,7 +28,7 @@ public:
 
     float& operator[](const int i);
 
-    Color Color::Time(float other) const;
+    Color Time(float other) const;
 
     const float* value_ptr() const;
 

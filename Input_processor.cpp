@@ -661,7 +661,7 @@ void InputProcessor::AddTriangleToArray(int v1, int v2, int v3) {
 	Point3 p1 = GetVertexArr().at(v1 - 1);
 	Point3 p2 = GetVertexArr().at(v2 - 1);
 	Point3 p3 = GetVertexArr().at(v3 - 1);
-	Triangle *t = &Triangle(p1, p2, p3);
+	Triangle *t = new Triangle(p1, p2, p3);
 	t->SetTriangleMtColor(GetIppMtColor());
 	t->SetTriangleSpColor(GetIppSpColor());
 	t->SetKa(GetKaMultiplier());
@@ -682,7 +682,7 @@ void InputProcessor::AddTriangleToArray(int v1, int v2, int v3, int vnt1, int vn
 	Point3 p1 = GetVertexArr().at(v1 - 1);
 	Point3 p2 = GetVertexArr().at(v2 - 1);
 	Point3 p3 = GetVertexArr().at(v3 - 1);
-	Triangle* t = &Triangle(p1, p2, p3);
+	Triangle* t = new Triangle(p1, p2, p3);
 	if (typ == "normal") {
 		Vector3 vn0 = GetVertexNormalArr().at(vnt1 - 1);
 		Vector3 vn1 = GetVertexNormalArr().at(vnt2 - 1);
@@ -716,7 +716,7 @@ void InputProcessor::AddTriangleToArray(int v1, int v2, int v3, int vt1, int vt2
 	Point3 p1 = GetVertexArr().at(v1 - 1);
 	Point3 p2 = GetVertexArr().at(v2 - 1);
 	Point3 p3 = GetVertexArr().at(v3 - 1);
-	Triangle* t = &Triangle(p1, p2, p3);
+	Triangle* t = new Triangle(p1, p2, p3);
 	Vector3 V0 = GetVertexNormalArr().at(vn1 - 1);
 	Vector3 V1 = GetVertexNormalArr().at(vn2 - 1);
 	Vector3 V2 = GetVertexNormalArr().at(vn3 - 1);
